@@ -1,0 +1,57 @@
+version: "3.7"
+services:
+  app:
+    build:
+      args:
+        user: www
+        uid: 1003
+      context: ./
+      dockerfile: Dockerfile
+    image: mylaravel
+    container_name: ${APP_CONTAINER}
+    restart: unless-stopped
+    working_dir: /var/www/
+    volumes:
+      - ./www:/var/www
+      - ./build/php/local.ini:/usr/local/etc/php/conf.d/local.ini
+    networks:
+      - lumiform-project-network
+
+  db:
+    image: mysql:8
+    container_name: ${DB_CONTAINER}
+    restart: unless-stopped
+    ports:
+      - "33060:3306"
+    environment:
+      MYSQL_DATABASE: ${DB_DATABASE}
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+      MYSQL_USER: ${DB_USERNAME}
+    networks:
+      - lumiform-project-network
+
+  nginx:
+    image: nginx:alpine
+    container_name: ${WEBSERVER_CONTAINER}
+    restart: unless-stopped
+    ports:
+      - 9191:80
+    volumes:
+      - ./www:/var/www
+      - ./build/nginx/conf.d/:/etc/nginx/conf.d/
+    networks:
+      - lumiform-project-network
+
+  adminer:
+    image: adminer
+    restart: always
+    container_name: ${ADMINER_CONTAINER}
+    ports:
+      - 9192:8080
+    networks:
+      - lumiform-project-network
+
+networks:
+  lumiform-project-network:
+    driver: bridge
