@@ -3,11 +3,11 @@
 namespace App\Http\Classes;
 
 /**
- * Class MovieSearchResponse
+ * Class Movie
  * @package App\Http\Classes
  */
 class Movie {
-//    private string $title;
+
     private float $imdbRating;
     private float $userRating;
 

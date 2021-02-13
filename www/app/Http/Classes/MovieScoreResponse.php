@@ -3,7 +3,10 @@
 
 namespace App\Http\Classes;
 
-
+/**
+ * Class MovieScoreResponse
+ * @package App\Http\Classes
+ */
 class MovieScoreResponse
 {
     private int $score;

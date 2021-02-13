@@ -69,37 +69,37 @@ class QuizApiControllerTest extends TestCase
     }
 
     /**
-     * Commented out but works at the momment: Not suitable for prod because test may fail if another movie with name is added.
-     * Solution: Mock results at the service layer
+     * Not suitable for prod because test may fail if another movie with name is added.gi
+     *
      */
-//    public function testQuizSearch_withValidInput_Assert200()
-//    {
-//        $user = factory(User::class)->create();
-//        $this->actingAs($user, 'api');
-//
-//        $searchResults = [
-//            0 => [
-//                "Title"=> "Fate of Alakada",
-//                "Year"=> "2020",
-//                "imdbID"=> "tt11829884",
-//                "Type"=> "movie",
-//                "Poster"=> "https://m.media-amazon.com/images/M/MV5BODEwNzY3YWYtMjA1Zi00MzgwLWI0M2UtYTkxMmMyZWU2ZDU3XkEyXkFqcGdeQXVyMTAxNDc4OTgy._V1_SX300.jpg"
-//            ],
-//            1 => [
-//                "Title"=> "Alakada Reloaded",
-//                "Year"=> "2017",
-//                "imdbID"=> "tt13275228",
-//                "Type"=> "movie",
-//                "Poster"=> "N/A"
-//            ]
-//        ];
-//
-//        $this->json('GET', $this->SEARCH_URL, ['Accept' => 'application/json'])
-//            ->assertStatus(200)
-//            ->assertJson([
-//                "results" => $searchResults,
-//                "username" => $user->name
-//            ]);
-//    }
+    public function testQuizSearch_withValidInput_Assert200()
+    {
+        $user = factory(User::class)->create();
+        $this->actingAs($user, 'api');
+
+        $searchResults = [
+            0 => [
+                "Title"=> "Fate of Alakada",
+                "Year"=> "2020",
+                "imdbID"=> "tt11829884",
+                "Type"=> "movie",
+                "Poster"=> "https://m.media-amazon.com/images/M/MV5BODEwNzY3YWYtMjA1Zi00MzgwLWI0M2UtYTkxMmMyZWU2ZDU3XkEyXkFqcGdeQXVyMTAxNDc4OTgy._V1_SX300.jpg"
+            ],
+            1 => [
+                "Title"=> "Alakada Reloaded",
+                "Year"=> "2017",
+                "imdbID"=> "tt13275228",
+                "Type"=> "movie",
+                "Poster"=> "N/A"
+            ]
+        ];
+
+        $this->json('GET', $this->SEARCH_URL, ['Accept' => 'application/json'])
+            ->assertStatus(200)
+            ->assertJson([
+                "results" => $searchResults,
+                "username" => $user->name
+            ]);
+    }
 
 }
