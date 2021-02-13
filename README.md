@@ -59,6 +59,12 @@ setup.sh: This script installs composer dependencies, migrates the db, set up en
 ./setup.sh
 ```
 
+### Setup API Keys for OMDB
+You need to set your api keys 
+```
+OMDB_APIKEY=
+OMDB_BASEURL=
+```
 
 ### Install composer commands
 

@@ -25,8 +25,8 @@ class QuizService
 
     public function __construct() {
         $this->externalGatewayService = new ExternalGatewayService();
-        $this->baseUrl = env("OMDB_BASEURL");
-        $this->apikey = env('OMDB_APIKEY');
+        $this->baseUrl = env("OMDB_BASE_URL");
+        $this->apikey = env('OMDB_API_KEY');
     }
 
     public function searchMovies(string $term): array {
