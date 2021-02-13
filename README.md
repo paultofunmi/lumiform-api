@@ -66,6 +66,15 @@ OMDB_APIKEY=
 OMDB_BASEURL=
 ```
 
+### Database Admin UI
+The docker-compose contains an adminui for working with the database.
+To login on admin, you need to
+```
+- Set database server (db)
+- Set username (same value set in docker .env )
+- Set password (same value set in docker .env )
+```
+
 ### Install composer commands
 
 ```
