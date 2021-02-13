@@ -5,7 +5,8 @@ To setup the environment variables used by docker, please follow these steps
 
 ```
 - You need to copy .env_sample and rename as .env
-- Set the values of these variables.
+- Set the values of these variables or use the default 
+- If you are changing these values, you need to copy the app container and set the value in bash scripts
 ```
 
 | Name                              | Description                               |
@@ -13,10 +14,10 @@ To setup the environment variables used by docker, please follow these steps
 | `DB_DATABASE`                     | Name of Database                          |
 | `DB_PASSWORD`                     | Database password                         |
 | `DB_USERNAME`                     | Database username                         |
-| `DB_CONTAINER`                    | Name of database container               |
-| `APP_CONTAINER`                   | Name of app container                        |
-| `ADMINER_CONTAINER`               | Name of adminer container                        |
-| `WEBSERVER_CONTAINER`             | Name of webserver container                               |
+| `DB_CONTAINER`                    | Name of database container                |
+| `APP_CONTAINER`                   | Name of app container                     |
+| `ADMINER_CONTAINER`               | Name of adminer container                 |
+| `WEBSERVER_CONTAINER`             | Name of webserver container               |
 
 
 ### Start Docker
