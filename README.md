@@ -62,31 +62,9 @@ setup.sh: This script installs composer dependencies, migrates the db, set up en
 ### Setup API Keys for OMDB
 You need to set your api keys 
 ```
-OMDB_APIKEY=
-OMDB_BASEURL=
+OMDB_API_KEY=
+OMDB_BASE_URL=
 ```
-
-### Database Admin UI
-The docker-compose contains an adminui for working with the database.
-To login on admin, you need to
-```
-- Set database server (db)
-- Set username (same value set in docker .env )
-- Set password (same value set in docker .env )
-```
-
-### Install composer commands
-
-```
-./composer.sh <your_composer_command>
-```
-
-### To exec into the container working directory, run
-
-```
- ./container.sh
-```
-
 
 ### Run unit tests
 You can use either php-unit.sh or php-artisan.sh to run tests
@@ -100,8 +78,28 @@ You can use either php-unit.sh or php-artisan.sh to run tests
  ./php-artisan.sh test 
 ```
 
+### Database Admin UI (Optional)
+The docker-compose contains an adminui for working with the database.
+To login on admin, you need to
+```
+- Set database server (db)
+- Set username (same value set in docker .env )
+- Set password (same value set in docker .env )
+```
 
-### To see list of php artisan commands, run 
+### Install composer commands (Optional)
+
+```
+./composer.sh <your_composer_command>
+```
+
+### To exec into the container working directory (Optional)
+
+```
+ ./container.sh
+```
+
+### To see list of php artisan commands (Optional) 
 
 ```
  ./php-artisan.sh 
