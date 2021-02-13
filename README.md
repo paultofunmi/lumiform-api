@@ -29,20 +29,22 @@ To setup the environment variables used by docker, please follow these steps
 ```
 
 ### Setup helper bash scripts
-I have added bash scripts to reduce key strokes when executing usual tasks.
-To make them executable, you need to make them executable
-Copy the value of APP_CONTAINER set in .env file and replace it with "lumiform_assessment-app" in bash scripts
-
-- chmod +x php-artisan.sh
-- chmod +x composer.sh
-- chmod +x container.sh
-- chmod +x php-unit.sh
+-  I have added bash scripts to reduce key strokes when executing usual tasks.
+- Copy the value of APP_CONTAINER set in .env file and replace it with "lumiform_assessment-app" in bash scripts
+- To make them executable, you need to run these commands
 
 ```
-- container.sh: For runing commands in the container
-- composer.sh: For running composer commands
-- php-artisan.sh: For running php artisan commands
-- php-unit.sh: For running php unit test
+chmod +x php-artisan.sh
+chmod +x composer.sh
+chmod +x container.sh
+chmod +x php-unit.sh
+```
+
+```
+container.sh: For runing commands in the container
+composer.sh: For running composer commands
+php-artisan.sh: For running php artisan commands
+php-unit.sh: For running php unit test
 ```
 
 ### Install composer dependencies
