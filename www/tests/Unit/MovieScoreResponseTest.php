@@ -5,6 +5,13 @@ namespace Tests\Unit;
 use App\Http\Classes\MovieScoreResponse;
 use PHPUnit\Framework\TestCase;
 
+/**
+ * Class MovieScoreResponseTest
+ * @package Tests\Unit
+ *
+ * Tests Percentage computation task
+ * Tests if response object contains keys
+ */
 class MovieScoreResponseTest extends TestCase
 {
 

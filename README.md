@@ -32,22 +32,10 @@ in bash scripts
 - I have added bash scripts to reduce key strokes when executing usual tasks.
 - Ensure that the value of APP_CONTAINER set in .env file is the same in bash scripts.
 - To do so, you need to replace "lumiform_assessment-app" with value you set for APP_CONTAINER 
-- To make bash scripts executable, you need to run these commands
+- To make bash scripts executable, you need to run (chmod +x <file>)
 
 ```
-chmod +x php-artisan.sh
-chmod +x composer.sh
-chmod +x container.sh
-chmod +x php-unit.sh
 chmod +x setup.sh
-```
-
-```
-container.sh: takes you into container
-composer.sh: For running composer commands
-php-artisan.sh: For running php artisan commands
-php-unit.sh: For running php unit test
-setup.sh: This script installs composer dependencies, migrates the db, set up encryption key and setup laravel's passport
 ```
 
 ### Setup laravel
@@ -77,6 +65,16 @@ You can use either php-unit.sh or php-artisan.sh to run tests
  
  ./php-artisan.sh test 
 ```
+
+### Available Bash scripts
+```
+container.sh: takes you into container
+composer.sh: For running composer commands
+php-artisan.sh: For running php artisan commands
+php-unit.sh: For running php unit test
+setup.sh: This script installs composer dependencies, migrates the db, set up encryption key and setup laravel's passport
+```
+
 
 ### Database Admin UI (Optional)
 The docker-compose contains an adminui for working with the database.
