@@ -7,7 +7,6 @@ use App\Http\Classes\MovieSearchResponse;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use App\Services\QuizService;
-use App\Term;
 
 /**
  * Class QuizApiController
