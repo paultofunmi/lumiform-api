@@ -4,7 +4,7 @@
 To setup the environment variables used by docker, please follow these steps
 
 ```
-- You need to copy .env_sample and rename as .env
+- You need to copy .docker.env-sample and rename as .env
 - Set the values of these variables or use the default in the sample file
 - If you are changing these values, you need to copy the value set 
 for APP_CONTAINER, replacing the new value with lumiform_assessment-app 
