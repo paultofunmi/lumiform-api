@@ -1,15 +1,12 @@
 # Lumiform - IMDB API 
 
-## Project setup
-
-```
-Setup Environment variables (see section below)
-```
-
 ### Environment Variables
 To setup the environment variables used by docker, please follow these steps
+
+```
 - You need to copy .env_sample and rename as .env
-- set the values of these variables.
+- Set the values of these variables.
+```
 
 | Name                              | Description                               |
 | ----------------------------------|-------------------------------------------|
@@ -25,7 +22,7 @@ To setup the environment variables used by docker, please follow these steps
 ### Start Docker
 
 ```
- run command: docker-compose up -d
+ docker-compose up -d
 ```
 
 ### Setup helper bash scripts
@@ -50,14 +47,19 @@ php-unit.sh: For running php unit test
 ### Install composer dependencies
 
 ```
-Run: ./composer.sh install
+./composer.sh install
 ```
 
 ### Run unit tests
 You can use either php-unit.sh or php-artisan.sh to run tests
 ```
- Using PhpUnit, Run: ./php-unit.sh
- Using Laravel Artisan, Run: ./php-artisan.sh test 
+ Using PhpUnit:
+  
+ ./php-unit.sh
+ 
+ Using Laravel Artisan, 
+ 
+ ./php-artisan.sh test 
 ```
 
 ### To exec into the container working directory, run 
